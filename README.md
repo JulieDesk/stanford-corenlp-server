@@ -33,3 +33,9 @@ PROJECT_DIR=$CURRENT_DIR/$VERSION_NAME
 
 FRENCH_MODELS_JAR=http://nlp.stanford.edu/software/stanford-french-corenlp-2016-10-31-models.jar
 ```
+
+
+Deploy on heroku
+```
+heroku container:push web
+```
