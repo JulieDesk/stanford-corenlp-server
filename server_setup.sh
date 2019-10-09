@@ -2,7 +2,7 @@
 . $(dirname "$0")/server_config.cfg
 
 # Downloading main archive
-wget $FILE_SERVER/$VERSION_NAME.zip -O $CURRENT_DIR/$VERSION_NAME.zip
+wget $FILE_SERVER/$VERSION_NAME.zip -O $CURRENT_DIR/$VERSION_NAME.zip --no-check-certificate
 
 # Unzipping...
 unzip $CURRENT_DIR/$VERSION_NAME.zip
@@ -12,5 +12,5 @@ rm -r $CURRENT_DIR/$VERSION_NAME.zip
 
 # Downloading french models...
 cd $CURRENT_DIR/$VERSION_NAME/
-wget $FRENCH_MODELS_JAR
+wget $FRENCH_MODELS_JAR  --no-check-certificate
 
