@@ -5,7 +5,7 @@
 
 # Starting server
 echo "Starting server..."
-nohup java --add-modules java.xml.bind -Djava.io.tmpdir="$TMP_DIR" -mx4g -cp "$PROJECT_DIR/*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port $PORT </dev/null &>/dev/null &
+nohup java -Djava.io.tmpdir="$TMP_DIR" -mx4g -cp "$PROJECT_DIR/*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port $PORT </dev/null &>/dev/null &
 
 echo "Waiting for server to start..."
 while ! nc -z localhost $PORT; do
